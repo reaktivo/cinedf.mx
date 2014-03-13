@@ -1,0 +1,28 @@
+doctype html
+html.no-js
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    title= title
+    != css('magnific-popup')
+    != css('main')
+    != js('modernizr')
+    script.
+      WebFontConfig = {
+        google: { families: [ 'Karla:400,400italic,700,700italic:latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })()
+  body
+    block content
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
+    script(src="//maps.googleapis.com/maps/api/js?v=3&key=AIzaSyAN9LADN4SenhFg5IHQyTT90N8fl7eTEa4&sensor=true")
+    != js('main')

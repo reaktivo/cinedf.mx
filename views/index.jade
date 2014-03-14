@@ -11,10 +11,9 @@ append content
       #map
     each movie in movies
       .movie.item
-        a.text(href=movie.youtube)
+        a.text(href="/#{movie.id}")
           h1= movie.title
           p: span.time= movie.time
-        a.info(href=movie.url.href, target='_blank') Info
         img.trailer(src=movie.img.path)
 
 append scripts

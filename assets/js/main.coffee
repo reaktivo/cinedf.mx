@@ -15,12 +15,11 @@ class Main
 
   setup_events: =>
     $('.movie .text').magnificPopup
-      disableOn: 700
-      type: 'iframe'
+      type: 'ajax'
       mainClass: 'mfp-fade'
       removalDelay: 160
       preloader: no
-      fixedContentPos: no
+      showCloseBtn: no
     $(window).resize @layout
 
   setup_map: =>

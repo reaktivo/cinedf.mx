@@ -47,6 +47,13 @@ body
       width 25%
 
 .movie
+  position relative
+  box-shadow 0 0 1px rgba(0,0,0,0.5)
+  transition all 0.15s ease-in-out
+  -webkit-transition @transition
+  &:hover
+    z-index 3
+    box-shadow 0 0 10px rgba(0,0,0,0.5)
   a.text
     position absolute
     z-index 1
@@ -64,6 +71,7 @@ body
   a.text[href]:hover
     background rgba(0,0,0,0.5) url('/img/info.svg') no-repeat center center
     background-size 16%
+
 
   a.info
     display block

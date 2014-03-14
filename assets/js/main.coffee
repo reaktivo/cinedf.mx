@@ -38,7 +38,8 @@ class Main
   layout: =>
     height = $('.movie').outerHeight()
     height *= 2 if height < 200
-    $('.item:not(.movie)').css { height }
-    @map.setCenter @map_latlng
+    $('#what').css { height }
+    setTimeout (=> @map.setCenter @map_latlng), 200
+
 
 $(document).ready -> window.app = new Main

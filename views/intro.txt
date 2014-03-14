@@ -1,0 +1,43 @@
+<!--
+
+  # ¿Qué?
+  cinedf.mx es una plataforma para el consumo inmediato de
+  trailers y los horarios de las películas que hay *hoy* en
+  las pantallas de cines **independientes** o **chidos**.
+
+  # ¿Quién?
+  El sitio fue diseñado y programado por Marcel Miranda Ackerman
+  mailto:m@reaktivo.com
+  http://reaktivo.com:80
+  http://twitter.com/reaktivo
+
+  # ¿Dónde y cuándo?
+  Hecho en la Ciudad de México, marzo del dosmil catorce.
+
+  # ¿Cómo?
+  El sitio funciona gracias a Nodejs sobre un VPS de
+  [DigitalOcean](https://www.digitalocean.com/?refcode=e2fd630e1714)
+  Es prácticamente 80% coffeescript, 15% stylus y el resto jade.
+  Que pinche hipster, ¿no?
+
+  Si te interesa tanto, el código fuente está disponible aquí:
+  https://github.com/reaktivo/cinedf.mx
+
+  Para separar responsabilidades, también desarrollé un scraper para
+  el sitio de la [Cineteca Nacional](http://cinetecanacional.net), el
+  cual puedes ver (y abrir issues) aquí:
+  https://github.com/reaktivo/cineteca
+
+  Happy forking
+
+  # ¿Por qué?
+  Es una buena pregunta, vivo cerca de la Cineteca Nacional y a cada
+  rato tengo ganas de ir a ver una buena película pero es una hueva
+  visitar su sitio, especialmente en un móvil, neta, inténtalo.
+
+  # ¿No te sientes mal por **escrapear** (¿existe la palabra en español?)?
+  No.
+
+  ### Fin ###
+
+-->

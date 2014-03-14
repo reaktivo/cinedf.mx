@@ -1,6 +1,6 @@
 extends layout
 
-block content
+append content
   #listing
     #what.item
       #hoy
@@ -11,9 +11,13 @@ block content
       #map
     each movie in movies
       .movie.item
-        a.text(href=movie.trailer)
+        a.text(href=movie.youtube)
           h1= movie.title
           p: span.time= movie.time
         a.info(href=movie.url.href, target='_blank') Info
         img.trailer(src=movie.img.path)
 
+append scripts
+  script(src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
+  script(src="//maps.googleapis.com/maps/api/js?v=3&key=AIzaSyAN9LADN4SenhFg5IHQyTT90N8fl7eTEa4&sensor=true")
+  != js('main')

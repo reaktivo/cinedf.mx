@@ -2,8 +2,7 @@
 { findWhere, last } = require 'underscore'
 StreamCache = require 'stream-cache'
 cache = new StreamCache
-
-prefix = 'http://www.cinetecanacional.net'
+cineteca = require 'cineteca'
 
 max_images = 24
 memory = []
@@ -20,6 +19,20 @@ cache = (path, stream) ->
 
 module.exports = (app) ->
 
+  app.locals.movies = []
+
+  get_showtimes = ->
+    console.log 'Loading movie showtimes'
+    cineteca.today (err, movies) ->
+      app.locals.movies = movies
+      console.log 'Finished loading movie showtimes'
+
+  # Reload movies eveery half hour
+  setInterval get_showtimes, 1000 * 60 * 30
+
+  # Do first load
+  do get_showtimes
+
   app.get '/imagenes/*', (req, res, next) ->
     if cache(req.path)
       console.log 'mem'
@@ -27,5 +40,5 @@ module.exports = (app) ->
     else
       console.log 'load'
       stream = cache(req.path, new StreamCache)
-      get(prefix + req.path).pipe stream
+      get(cineteca.prefix + req.path).pipe stream
       stream.pipe res

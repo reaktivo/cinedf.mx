@@ -2,7 +2,6 @@ x = require 'express'
 { join } = require 'path'
 load = require 'express-load'
 assets = require 'connect-assets'
-cineteca = require 'cineteca'
 
 app = do x
 
@@ -23,20 +22,6 @@ if 'development' is app.get('env')
 
 load 'routes'
   .into app
-
-app.locals.movies = []
-
-get_showtimes = ->
-  console.log 'Loading movie showtimes'
-  cineteca.today (err, movies) ->
-    app.locals.movies = movies
-    console.log 'Finished loading movie showtimes'
-
-# Reload movies eveery half hour
-setInterval get_showtimes, 1000 * 60 * 30
-
-# Do first load
-do get_showtimes
 
 app.listen app.get('port'), ->
   console.log "Server listening on port #{app.get('port')}"

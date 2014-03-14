@@ -11,7 +11,6 @@ cache = (path, stream) ->
   if stream
     memory.push { path, stream }
     memory.shift() if memory.length > max_images
-    console.log memory.length
     last(memory).stream
   else
     c = findWhere memory, { path }
@@ -35,10 +34,8 @@ module.exports = (app) ->
 
   app.get '/imagenes/*', (req, res, next) ->
     if cache(req.path)
-      console.log 'mem'
       cache(req.path).pipe(res)
     else
-      console.log 'load'
       stream = cache(req.path, new StreamCache)
       get(cineteca.prefix + req.path).pipe stream
       stream.pipe res

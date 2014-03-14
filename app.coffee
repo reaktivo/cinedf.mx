@@ -2,12 +2,14 @@ x = require 'express'
 { join } = require 'path'
 load = require 'express-load'
 assets = require 'connect-assets'
+nudist = require 'nudist'
 
 app = do x
 
 app.set 'port', process.env.PORT or 3000
 app.set 'views', join(__dirname, 'views')
 app.set 'view engine', 'jade'
+app.use nudist 'cinedf.mx'
 app.use x.favicon join __dirname, 'public', 'favicon.ico'
 app.use x.logger('dev')
 app.use x.json()

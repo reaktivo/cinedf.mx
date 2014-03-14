@@ -19,7 +19,8 @@
     "cineteca": "~0.0.1",
     "request": "~2.34.0",
     "memorystream": "~0.2.0",
-    "stream-cache": "0.0.2"
+    "stream-cache": "0.0.2",
+    "express-nudist": "0.0.2"
   },
   "devDependencies": {
     "flightplan": "git://github.com/reaktivo/flightplan.git#master"

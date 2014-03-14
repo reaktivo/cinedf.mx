@@ -30,6 +30,7 @@ class Main
     @marker = new Marker
       map: @map
       position: @location
+      icon: "http://i.imgur.com/shukrTh.png"
 
   layout: =>
     height = $('.movie').outerHeight()

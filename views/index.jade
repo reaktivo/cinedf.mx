@@ -9,6 +9,7 @@ append content
           p
             a(href="https://www.google.com/maps?q=Cineteca+Nacional&sll=19.3609935,-99.1641465&sspn=0.0077738,0.0109864&t=m&cid=0xd073d6fc0bb89912&hq=Cineteca+Nacional&z=16&iwloc=A", target="_blank") Av. México Coyoacán #389
       #map
+      .fb-like(data-href="https://cinedf.mx", data-width="150", data-layout="button_count", data-action="like", data-show-faces="false", data-share="true", data-colorscheme="dark")
     each movie in movies
       .movie.item
         a.text(href="/#{movie.id}")

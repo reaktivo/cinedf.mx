@@ -5,6 +5,10 @@ html.no-js
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1")
     title= title
+    meta(property="og:title", content="Hoy en la Cineteca Nacional")
+    meta(property="og:type", content="website")
+    meta(property="og:url", content="http://cinedf.mx")
+    meta(property="og:image", content="http://cinedf.mx/img/cinedf.png")
     != css('magnific-popup')
     != css('main')
     != js('modernizr')
@@ -22,6 +26,16 @@ html.no-js
         s.parentNode.insertBefore(wf, s);
       })()
   body
+    #fb-root
+    script.
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=737049746320316";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+
     block content
     block scripts
     script.

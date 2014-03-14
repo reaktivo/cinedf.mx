@@ -4,7 +4,7 @@ block content
   #listing
     #hoy.item
       .text
-        h1 Hoy en la Cineteca Nacional
+        h1 Hoy en la <br> Cineteca Nacional
         p
           a(href="https://www.google.com/maps?q=Cineteca+Nacional&sll=19.3609935,-99.1641465&sspn=0.0077738,0.0109864&t=m&cid=0xd073d6fc0bb89912&hq=Cineteca+Nacional&z=16&iwloc=A", target="_blank") Av. México Coyoacán #389
     #map.item
@@ -13,6 +13,6 @@ block content
         a.text(href=movie.trailer)
           h1= movie.title
           p: span.time= movie.time
-        a.info(href=movie.url, target='_blank') Info
-        img.trailer(src=movie.img)
+        a.info(href=movie.url.href, target='_blank') Info
+        img.trailer(src=movie.img.path)
 

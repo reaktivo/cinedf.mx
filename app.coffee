@@ -2,7 +2,7 @@ x = require 'express'
 { join } = require 'path'
 load = require 'express-load'
 assets = require 'connect-assets'
-nudist = require 'nudist'
+nudist = require 'express-nudist'
 
 app = do x
 

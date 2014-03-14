@@ -8,7 +8,7 @@ app = do x
 app.set 'port', process.env.PORT or 3000
 app.set 'views', join(__dirname, 'views')
 app.set 'view engine', 'jade'
-app.use x.favicon()
+app.use x.favicon join __dirname, 'public', 'favicon.ico'
 app.use x.logger('dev')
 app.use x.json()
 app.use x.urlencoded()

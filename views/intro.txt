@@ -3,12 +3,12 @@
   # ¿Qué?
   cinedf.mx es una plataforma para el consumo inmediato de
   trailers y los horarios de las películas que hay *hoy* en
-  las pantallas de cines **independientes** o **chidos**.
+  las salas de cines **independientes** de la ciudad.
 
   # ¿Quién?
   El sitio fue diseñado y programado por Marcel Miranda Ackerman
   mailto:m@reaktivo.com
-  http://reaktivo.com:80
+  http://drop.reaktivo.com:80
   http://twitter.com/reaktivo
 
   # ¿Dónde y cuándo?

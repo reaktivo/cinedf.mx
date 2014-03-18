@@ -36,9 +36,7 @@ class Main
       icon: "http://i.imgur.com/shukrTh.png"
 
   layout: =>
-    height = $('.movie').outerHeight()
-    height *= 2 if height < 200
-    $('#what').css { height }
+    $('#what').css height: $('.movie').outerHeight()
     setTimeout (=> @map.setCenter @map_latlng), 200
 
 

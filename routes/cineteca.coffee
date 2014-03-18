@@ -1,5 +1,5 @@
 { get } = require 'request'
-{ findWhere, last } = require 'underscore'
+{ findWhere, last, isEmpty } = require 'underscore'
 StreamCache = require 'stream-cache'
 cache = new StreamCache
 cineteca = require 'cineteca'
@@ -23,7 +23,7 @@ module.exports = (app) ->
   get_showtimes = ->
     console.log 'Loading movie showtimes'
     cineteca.today (err, movies) ->
-      app.locals.movies = movies
+      app.locals.movies = movies unless err or isEmpty movies
       console.log 'Finished loading movie showtimes'
 
   # Reload movies eveery half hour

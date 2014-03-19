@@ -16,13 +16,13 @@
     "uglify-js": "~2.4.12",
     "csso": "~1.3.11",
     "http-proxy": "~1.0.2",
-    "cineteca": "~0.0.1",
+    "cineteca": "~0.0.5",
     "request": "~2.34.0",
     "memorystream": "~0.2.0",
     "stream-cache": "0.0.2",
     "express-nudist": "0.0.2"
   },
   "devDependencies": {
-    "flightplan": "git://github.com/reaktivo/flightplan.git#master"
+    "flightplan": "~0.2.0"
   }
 }

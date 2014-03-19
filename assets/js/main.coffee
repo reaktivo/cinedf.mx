@@ -36,8 +36,10 @@ class Main
       icon: "http://i.imgur.com/shukrTh.png"
 
   layout: =>
-    $('#what').css height: $('.movie').outerHeight()
-    setTimeout (=> @map.setCenter @map_latlng), 200
+    setTimeout =>
+      $('#what').css height: $('.movie').outerHeight()
+      @map.panTo @map_latlng
+    , 50
 
 
 $(document).ready -> window.app = new Main

@@ -11,16 +11,15 @@ class Main
   constructor: ->
     do @setup_events
     do @setup_map
-    $('window, .movie img').load @layout
 
   setup_events: =>
+    $('window, .movie img').on 'load resize', @layout
     $('.movie .text').magnificPopup
       type: 'ajax'
       mainClass: 'mfp-fade'
       removalDelay: 160
       preloader: no
       showCloseBtn: no
-    $(window).resize @layout
 
   setup_map: =>
     @map = new Map $('#map')[0],

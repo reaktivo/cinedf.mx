@@ -19,6 +19,7 @@ cache = (path, stream) ->
 module.exports = (app) ->
 
   app.locals.movies = []
+  app.locals.default_image = '/img/default.png'
 
   get_showtimes = ->
     console.log 'Loading movie showtimes'

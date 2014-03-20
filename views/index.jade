@@ -15,7 +15,8 @@ append content
         a.text(href="/#{movie.id}")
           h1= movie.title
           p: span.time= movie.time
-        img.trailer(src=movie.img.path)
+        img.trailer(src=movie.img ? movie.img.path : default_img)
+
 
 append scripts
   script(src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")

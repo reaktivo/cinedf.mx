@@ -1,6 +1,5 @@
 #= require magnific-popup
 #= require map_style
-#= require masonry
 
 { Map, LatLng, Marker } = google.maps
 

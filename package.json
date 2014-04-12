@@ -23,6 +23,6 @@
     "express-nudist": "0.0.2"
   },
   "devDependencies": {
-    "flightplan": "~0.2.0"
+    "flightplan": "~0.3.0"
   }
 }

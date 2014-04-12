@@ -1,6 +1,9 @@
 extends layout
 
 append content
+
+  #movie-container.mfp-hide
+    block movie-container
   #listing
     #what.item
       #hoy
@@ -17,7 +20,6 @@ append content
           h1= movie.title
           p: span.time= movie.time
         img.spacer(src="/img/spacer.png")
-
 
 append scripts
   script(src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")

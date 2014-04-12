@@ -1,5 +1,6 @@
 #= require magnific-popup
 #= require map_style
+#= require page
 
 { Map, LatLng, Marker } = google.maps
 
@@ -14,12 +15,6 @@ class Main
 
   setup_events: =>
     $('window, .movie img').on 'load resize', @layout
-    $('.movie .text').magnificPopup
-      type: 'ajax'
-      mainClass: 'mfp-fade'
-      removalDelay: 160
-      preloader: no
-      showCloseBtn: no
 
   setup_map: =>
     @map = new Map $('#map')[0],
@@ -36,5 +31,29 @@ class Main
 
   layout: => @map.panTo @map_latlng
 
+  show: (src) ->
+    $.magnificPopup.open
+      items: { src, type: 'inline' }
+      callbacks: { close: -> page '/' }
 
-$(document).ready -> window.app = new Main
+  hide: ->
+    do $.magnificPopup.close
+    do $('#movie').remove
+
+
+$(document).ready ->
+
+  window.app = new Main
+
+  page '/', -> do app.hide
+
+  page '/:id', (ctx) ->
+    movie = $('#movie')
+    if movie.data('id') is ctx.params.id
+      app.show movie
+      movie.empty().remove()
+    else
+      $.get ctx.path, (data) ->
+        app.show $(data).find('#movie')
+
+  do page.start

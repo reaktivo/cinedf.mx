@@ -39,15 +39,19 @@ body
     overflow hidden
     position relative
     box-sizing border-box
-    @media (min-width: 320px)
-      width 100%
-    @media (min-width: 768px)
+    @media (max-width: 960px)
+      width 33.333333%
+    @media (max-width: 768px)
       width 50%
-    @media (min-width: 1200px)
-      width 25%
+    @media (max-width: 520px)
+      width 100%
+    .spacer
+      display block
+      width 100%
 
 .movie
-  position relative
+  background-size cover
+  background-position center center
   box-shadow 0 0 1px rgba(0,0,0,0.5)
   transition all 0.15s ease-in-out
   -webkit-transition @transition
@@ -72,26 +76,13 @@ body
     background rgba(0,0,0,0.5) url('/img/info.svg') no-repeat center center
     background-size 16%
 
-
-  a.info
-    display block
-    position absolute
-    size = 20px
-    right size
-    bottom size
-    height 0
-    padding-top size
-    width size
-    overflow hidden
-    background url('/img/info.svg') no-repeat center center
-    background-size cover
-    z-index 2
-
   img.trailer
-    position relative
+    position absolute
     display block
-    margin 0 auto
-    width 100%
+    top 0
+    bottom 0
+    left 0
+    right 0
 
 #what
   position relative
@@ -139,12 +130,6 @@ body
     bottom 16px
     z-index 4
     width auto !important
-
-.item:not(.movie)
-  display block
-  min-width 300px
-  min-height 156px
-
 
 #movie
   box-sizing border-box

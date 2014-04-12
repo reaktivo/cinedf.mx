@@ -1,5 +1,6 @@
 #= require magnific-popup
 #= require map_style
+#= require masonry
 
 { Map, LatLng, Marker } = google.maps
 
@@ -34,11 +35,7 @@ class Main
       position: @cineteca_latlng
       icon: "http://i.imgur.com/shukrTh.png"
 
-  layout: =>
-    setTimeout =>
-      $('#what').css height: $('.movie').outerHeight()
-      @map.panTo @map_latlng
-    , 50
+  layout: => @map.panTo @map_latlng
 
 
 $(document).ready -> window.app = new Main

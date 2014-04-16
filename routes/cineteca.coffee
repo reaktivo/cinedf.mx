@@ -2,7 +2,7 @@
 { findWhere, last, isEmpty } = require 'underscore'
 StreamCache = require 'stream-cache'
 cache = new StreamCache
-cineteca = require 'cineteca'
+cineteca = do require 'cineteca'
 
 max_images = 24
 memory = []
@@ -38,5 +38,5 @@ module.exports = (app) ->
       cache(req.path).pipe(res)
     else
       stream = cache(req.path, new StreamCache)
-      get(cineteca.prefix + req.path).pipe stream
+      get(cineteca.entry_url + req.path).pipe stream
       stream.pipe res

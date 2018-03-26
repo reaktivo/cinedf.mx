@@ -6,21 +6,21 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "~3.4.8",
-    "jade": "~1.1.5",
+    "cineteca": "~0.1.3",
     "coffee-script": "~1.7.1",
     "connect-assets": "~3.0.0-beta2",
-    "underscore": "~1.6.0",
-    "express-load": "~1.1.9",
+    "csso": "~1.3.11",
+    "express": "~3.4.8",
+    "express-load": "^1.1.16",
+    "express-nudist": "0.0.2",
+    "http-proxy": "~1.0.3",
+    "jade": "~1.1.5",
+    "memorystream": "~0.2.0",
+    "request": "~2.34.0",
+    "stream-cache": "0.0.2",
     "stylus": "~0.42.3",
     "uglify-js": "~2.4.13",
-    "csso": "~1.3.11",
-    "http-proxy": "~1.0.3",
-    "cineteca": "~0.1.3",
-    "request": "~2.34.0",
-    "memorystream": "~0.2.0",
-    "stream-cache": "0.0.2",
-    "express-nudist": "0.0.2"
+    "underscore": "~1.6.0"
   },
   "devDependencies": {
     "flightplan": "~0.3.0"
